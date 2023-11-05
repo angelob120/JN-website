@@ -115,37 +115,79 @@ button {
     margin: 0 auto;
 }
 
+
+
+
+
+
+
+
+
 .expertise-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 20px;
     padding: 20px;
     background-color: #FFF;
     margin-top: 20px;
 }
 
 .card-container {
-    width: 300px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .card {
-    width: 100%;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    padding: 10px;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    border: 5px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 10px;
     text-align: left;
+}
+
+.icon {
+    margin-right: 10px; /* Add some space between the icon and the text */
 }
 
 .icon img {
-    max-width: 30%;
-    vertical-align: middle;
+    width: 100px; /* Fixed width for the icon */
+    height: auto; /* Height will scale accordingly */
 }
 
 .text {
-    text-align: left;
+    font-size: 30px; /* Example font size for the text, adjust as needed */
 }
 
+.area-of-expertise {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.area-of-expertise p {
+    font-size: small;
+}
+
+.statistics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.stats div {
+    font-size: 48px;
+}
+
+.stats label {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Additional styles for other elements, such as brands and services */
 .brands {
     display: flex;
     flex-direction: column;
@@ -154,18 +196,11 @@ button {
     background-color: #E0FFFF;
 }
 
-.brand-logos {
-    display: flex;
-    gap: 20px;
-    padding-top: 10px;
-}
-
 .brand-logos img {
     max-width: 150px;
 }
 
 .services {
-    width: 30%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -203,50 +238,11 @@ button {
     color: white;
 }
 
-.stats {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-}
 
-.stats div {
-    font-size: 48px;
-}
 
-.stats label {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 12px;
-}
 
-.expertise-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    gap: 20px;
-}
 
-.card-container {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: calc(33% - 20px);
-}
 
-.card {
-    flex: 1 0 calc(50% - 20px);
-}
-
-.area-of-expertise {
-    flex: 2;
-    padding-left: 20px;
-}
-
-.area-of-expertise p {
-    font-size: small;
-}
 
 
 
