@@ -1,6 +1,13 @@
+* {
+    overflow-x: hidden;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+    
 }
 
 
@@ -11,6 +18,16 @@ body {
     padding: 50px;
     background-color: rgb(23,47,47);
     color: white;
+}
+
+
+.content-container {
+    margin: 0 auto; /* Center the container */
+    padding: 0 50px; /* Padding left and right */
+    max-width: 1200px; /* Maximum width of the content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .left-content {
@@ -75,7 +92,112 @@ button {
 }
 
 
+/* For very large screens (larger than 1600px) */
+@media (min-width: 1601px) {
+    .hero {
+      padding: 80px; /* Example: Increase padding */
+    }
+  }
+  
+  /* For large screens (1600px) */
+  @media (max-width: 1600px) {
+    .hero {
+      justify-content: center; /* Stack content for narrower viewports */
+      padding: 60px;
+    }
+    .left-content, .right-content {
+      width: 50%; /* Adjust widths to prevent squeezing */
+    }
+  }
+  
+  /* For medium screens (1200px) */
+  @media (max-width: 1200px) {
+    .hero {
+      flex-direction: column;
+      text-align: center; /* Stack content vertically and align text */
+      flex-direction: column-reverse;
+    }
+    .left-content, .right-content {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+  
+  /* For small screens (922px) */
+  @media (max-width: 922px) {
+    h1 {
+      font-size: 40px; /* Decrease font size for smaller screens */
+    }
+    h2 {
+      font-size: 30px;
+    }
+    .buttons {
+      flex-direction: column; /* Stack buttons */
+      gap: 10px;
+    }
+  }
+  
+  /* For extra small screens (601px) */
+  @media (max-width: 601px) {
+    .hero {
+      padding: 40px 20px; /* Reduce padding on smaller screens */
+      flex-direction: column-reverse;
+    }
+    .buttons button {
+      width: 100%; /* Full width buttons */
+    }
+    .gun-club-badge {
+      top: 10px;
+      right: 10px; /* Adjust badge position */
+    }
+  }
+  
+  /* For very small screens (600px and below) */
+  @media (max-width: 600px) {
 
+    .hero{
+        flex-direction: column-reverse;
+    }
+    h1 {
+      font-size: 36px; /* Further reduce font size */
+    }
+    h2 {
+      font-size: 28px;
+    }
+  }
+  
+  @media only screen and (max-width: 320px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .left-content,
+    .right-content {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .right-content {
+        order: -1; /* This will place the right-content above the left-content */
+    }
+
+    /* Adjust the left-content if needed, such as reducing the size of the text */
+    .left-content h1 {
+        font-size: 24px; /* Example of reducing the h1 font size */
+    }
+    
+    .left-content h2 {
+        font-size: 20px; /* Example of reducing the h2 font size */
+    }
+    
+    /* If the buttons need adjustment, you can do it here */
+    .buttons button {
+        width: 100%; /* Example of making the buttons full width */
+        margin-bottom: 10px; /* Adds space between the buttons */
+    }
+}
+
+  
 
 
 
