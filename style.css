@@ -20,7 +20,6 @@ body {
     color: white;
 }
 
-
 .content-container {
     margin: 0 auto; /* Center the container */
     padding: 0 50px; /* Padding left and right */
@@ -99,29 +98,51 @@ button {
     }
   }
   
-  /* For large screens (1600px) */
-  @media (max-width: 1600px) {
+/* For large screens (larger than 1200px but less than or equal to 1600px) */
+@media (min-width: 1201px) and (max-width: 1600px) {
+    /* The styles inside this media query will apply to screens between 1201px and 1600px in width */
     .hero {
-      justify-content: center; /* Stack content for narrower viewports */
-      padding: 60px;
+        flex-direction: row; /* Ensure default flex row layout is maintained */
     }
-    .left-content, .right-content {
-      width: 50%; /* Adjust widths to prevent squeezing */
+    .left-content,
+    .right-content {
+        width: auto; /* Reset width to default so they align side by side */
+        padding-right: 0; /* Remove any additional right padding if it was set */
     }
-  }
+    /* Any additional styles for this range */
+}
+
+/* For medium screens (up to 1200px) */
+@media (max-width: 1200px) {
+    .hero {
+        flex-direction: column; /* Stack content vertically for narrower viewports */
+        padding: 50px 20px; /* Adjust padding */
+    }
   
-  /* For medium screens (1200px) */
-  @media (max-width: 1200px) {
-    .hero {
-      flex-direction: column;
-      text-align: center; /* Stack content vertically and align text */
-      flex-direction: column-reverse;
+    .content-container {
+        flex-direction: column; /* Ensure the container stacks its children */
+        align-items: center; /* Center-align the children */
     }
+
     .left-content, .right-content {
-      width: 100%;
-      padding-right: 0;
+        width: 100%; /* Full width for stacked layout */
+        padding-right: 0; /* Remove any padding-right */
     }
-  }
+
+    .right-content {
+        order: -1; /* This will ensure the right-content comes above the left-content */
+    }
+    
+    /* Adjust button container for stacked layout */
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Adjust gap between buttons */
+        width: 100%; /* Full width for the buttons */
+    }
+    /* Any additional styles for this range */
+}
+
+
   
   /* For small screens (922px) */
   @media (max-width: 922px) {
