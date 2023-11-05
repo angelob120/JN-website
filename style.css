@@ -74,6 +74,13 @@ button {
     color: white;
 }
 
+
+
+
+
+
+
+
 .container {
     font-family: Arial, sans-serif;
     max-width: 800px;
@@ -283,7 +290,7 @@ button {
     display: flex;
     text-align: left;
     flex-direction: row;
-    align-items: center;  /* Align items vertically center */
+
 }
 
 .project-card .text-content {
