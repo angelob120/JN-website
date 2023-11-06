@@ -420,6 +420,7 @@ button {
 @media (max-width: 600px) {
     .brands {
         padding: 10px; /* Adjust padding */
+        flex-direction: column;
     }
     .brand-logos img {
         max-width: 100px; /* Even smaller images for very small screens */
@@ -688,11 +689,16 @@ button {
 .project-card {
     width: calc(50% - 20px);
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 2.5px solid #ccc;
+    border-radius: 20px;
     display: flex;
     text-align: left;
     flex-direction: row;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers cards in the container */
+    gap: 40px;
+    margin: 0 auto;
 }
 
 .project-card .text-content {
@@ -731,7 +737,98 @@ button {
     object-fit: cover;
 }
 
+/* Base styles for the project cards (not shown here as you already have them above) */
 
+/* Media query for screens larger than 1600px */
+@media (min-width: 1601px) {
+    .project-cards{
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-cards {
+      /* Adjustments for a very wide layout if needed */
+    }
+  }
+  
+  /* Media query for screens up to 1600px */
+  @media (max-width: 1600px) {
+    .project-card {
+      width: calc(50% - 20px); /* 3 cards in a row */
+      align-items: center;
+    }
+  }
+  
+  /* Media query for screens up to 1200px */
+  @media (max-width: 1200px) {
+    .project-cards{
+        text-align: center;
+        align-items: center;
+    }
+
+    .project-card {
+      width: calc(50% - 20px); /* 2 cards in a row */
+    }
+  }
+  
+  /* Media query for screens up to 922px */
+  @media (max-width: 922px) {
+    .project-cards {
+      max-width: 100%; /* Use full container width */
+      gap: 20px; /* Adjust gap for smaller screen */
+    }
+
+    .text-content h2{
+        font-size: xx-large;
+    }
+
+    .text-content p{
+        font-size: large;
+    }
+
+    .project-card {
+      width: 100%; /* Full width cards */
+      flex-direction: column; /* Stack image and text-content vertically */
+    }
+
+    .project-card img{
+        width: 50%;
+        margin-top: 2.5%;
+        border-radius: 20px;
+    }
+
+    .project-card img {
+      max-width: 100%; /* Adjust image width to match card width */
+      height: auto; /* Keep the aspect ratio */
+    }
+  }
+  
+  /* Media query for screens up to 601px */
+  @media (max-width: 601px) {
+    /* Any additional styles for this breakpoint */
+  }
+  
+  /* Media query for screens up to 600px */
+  @media (max-width: 600px) {
+    /* Usually, this is where you might stack cards or adjust padding/margins */
+  }
+  
+  /* Media query for screens up to 320px */
+  @media (max-width: 320px) {
+    .projects-section {
+      padding: 20px; /* Reduce padding on very small screens */
+    }
+    .projects-section h1 {
+      font-size: 24px; /* Adjust headline size for small screens */
+    }
+    .projects-section p {
+      font-size: 16px; /* Adjust paragraph size for small screens */
+    }
+    .project-card {
+      /* Adjustments for project cards on small screens if needed */
+    }
+  }
+  
 
 
 
@@ -786,6 +883,57 @@ button {
 }
 
 
+@media (max-width: 1601px) {
+    /* Custom styles for screens smaller than 1601px */
+}
+
+@media (max-width: 1600px) {
+    /* Custom styles for screens smaller than 1600px */
+}
+
+@media (max-width: 1200px) {
+    /* Custom styles for screens smaller than 1200px */
+    .booking-section h1 {
+        font-size: 2.5em; /* Adjust font size for smaller screens */
+    }
+    
+    .calendar-section img {
+        width: 80%; /* Increase width percentage for smaller screens */
+    }
+}
+
+@media (max-width: 922px) {
+    /* Custom styles for screens smaller than 922px */
+    .booking-section {
+        padding: 0 20px; /* Add padding to the sides on smaller screens */
+    }
+    
+    .booking-section p {
+        max-width: 600px; /* Decrease the maximum width of paragraphs */
+    }
+}
+
+@media (max-width: 601px) {
+    /* Custom styles for screens smaller than 601px */
+}
+
+@media (max-width: 600px) {
+    /* Custom styles for screens smaller than 600px */
+    .booking-section h1 {
+        font-size: 2em; /* Further adjust font size for smaller screens */
+    }
+    
+    .calendar-section img {
+        width: 90%; /* Further increase width percentage for very small screens */
+    }
+}
+
+@media (max-width: 320px) {
+    /* Custom styles for screens smaller than 320px */
+}
+
+
+
 
 
 .footer {
@@ -814,3 +962,55 @@ button {
 .social-link:hover {
     color: #bdc3c7; /* Light grey color on hover */
 }
+
+
+@media (max-width: 1601px) {
+    /* Styles for screens smaller than 1601px */
+  }
+  
+  @media (max-width: 1600px) {
+    /* Styles for screens smaller than 1600px */
+  }
+  
+  @media (max-width: 1200px) {
+    /* Styles for screens smaller than 1200px */
+    .footer {
+      padding: 20px 20px; /* Reduce padding */
+    }
+    .social-link {
+      font-size: 20px; /* Reduce font size */
+    }
+  }
+  
+  @media (max-width: 922px) {
+    /* Styles for screens smaller than 922px */
+    .footer h6 {
+      font-size: 16px; /* Reduce h6 font size */
+    }
+  }
+  
+  @media (max-width: 601px) {
+    /* Styles for screens smaller than 601px */
+    .social-links {
+      flex-direction: column; /* Stack icons vertically */
+      gap: 10px; /* Reduce gap */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    /* Styles for screens smaller than 600px */
+    .footer {
+      padding: 10px; /* Further reduce padding */
+    }
+    .social-link {
+      font-size: 18px; /* Further reduce icon size */
+    }
+  }
+  
+  @media (max-width: 320px) {
+    /* Styles for screens smaller than 320px */
+    .footer h6 {
+      font-size: 14px; /* Further reduce h6 font size */
+    }
+  }
+  
