@@ -558,6 +558,95 @@ button {
     color: white;
 }
 
+/* For screens larger than 1600px */
+@media (min-width: 1601px) {
+    .project-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around; /* Or use 'space-between' if you prefer */
+    }
+    .project-card {
+      width: 22%; /* Four cards in a row */
+      margin: 1%; /* Adjust margin */
+    }
+  }
+  
+  /* For screens up to 1600px */
+  @media (max-width: 1600px) {
+    .project-cards {
+      justify-content: space-between;
+    }
+    .project-card {
+      width: 22%; /* Three cards in a row */
+      margin: 1.3333%; /* Adjust margin */
+    }
+  }
+  
+  /* For screens up to 1200px */
+  @media (max-width: 1200px) {
+    .project-cards {
+      justify-content: space-between;
+    }
+    .project-card {
+      width: 30%; /* Two cards in a row */
+      margin: 1.5%; /* Adjust margin */
+    }
+  }
+  
+  /* For screens up to 922px */
+  @media (max-width: 922px) {
+    .project-cards {
+      justify-content: space-around;
+    }
+    .project-card {
+      width: 45%; /* Two cards in a row with more space */
+      margin: 2.5%; /* Adjust margin */
+    }
+    .card-container{
+        order: 2;
+    }
+    .expertise-section{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+  }
+  
+  /* For screens up to 601px */
+  @media (max-width: 601px) {
+    .project-cards {
+      justify-content: center;
+    }
+    .project-card {
+      width: 90%; /* Full width cards with a little margin */
+      margin: 5% 0; /* Vertical margin */
+    }
+  }
+  
+  /* For screens up to 600px */
+  @media (max-width: 600px) {
+    .project-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+    .project-card {
+      width: 100%; /* Full width */
+      margin-bottom: 20px; /* Add some space between cards */
+    }
+    .text h3{
+        font-size: large;
+    }
+
+  }
+  
+  /* For screens up to 320px */
+  @media (max-width: 320px) {
+    .project-card {
+      margin-bottom: 15px; /* Reduce space between cards even more */
+    }
+  }
+  
+
 
 
 
