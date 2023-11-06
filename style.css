@@ -265,6 +265,187 @@ button {
     margin: 0 auto;
 }
 
+/* For very large screens (larger than 1600px) */
+@media (min-width: 1601px) {
+    .container {
+        padding: 50px; /* More padding for very large screens */
+        max-width: 1400px; /* Optional: Increase max-width if needed */
+    }
+}
+
+/* For large screens (up to 1600px) */
+@media (max-width: 1600px) {
+    .container {
+        padding: 40px; /* Slightly less padding than very large screens */
+    }
+    /* Additional styles if needed */
+}
+
+/* For medium screens (up to 1200px) */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        align-items: center; /* Center-align the children */
+    }
+
+    .image-section, .text-section {
+        width: 100%; /* Full width for stacked layout */
+        padding: 0; /* Remove horizontal padding */
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-section {
+        order: -1; /* Place the image above the text */
+    }
+}
+
+/* For small screens (up to 922px) */
+@media (max-width: 922px) {
+    .container {
+        padding: 30px; /* Adjust padding for smaller containers */
+    }
+    /* Additional styles if needed */
+}
+
+/* For extra small screens (up to 601px) */
+@media (max-width: 601px) {
+    .container {
+        padding: 20px; /* Smaller padding for extra small screens */
+    }
+    /* Adjust text sizes and other elements as needed */
+}
+
+/* For very small screens (up to 600px) */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Even smaller padding for very small screens */
+    }
+    /* Further adjust text sizes and other elements as needed */
+}
+
+/* For smallest screens (up to 320px) */
+@media (max-width: 320px) {
+    .container {
+        padding: 10px; /* Minimal padding for the smallest screens */
+    }
+    /* Adjust text sizes and other elements as needed */
+    .text-section h1 {
+        font-size: 20px; /* Reduce the font size for h1 */
+    }
+    .text-section h2 {
+        font-size: 18px; /* Reduce the font size for h2 */
+    }
+}
+
+
+
+
+
+/* Additional styles for other elements, such as brands and services */
+.brands {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #E0FFFF;
+}
+
+.brand-logos img {
+    max-width: 150px;
+}
+
+
+
+/* For very large screens (larger than 1600px) */
+@media (min-width: 1601px) {
+    .brands {
+        padding: 40px; /* Increase padding for larger screens */
+    }
+    .brand-logos img {
+        max-width: 200px; /* Larger images for larger screens */
+    }
+}
+
+/* For large screens (up to 1600px) */
+@media (max-width: 1600px) {
+    .brands {
+        padding: 30px; /* Slightly smaller padding for large screens */
+    }
+    .brand-logos img {
+        max-width: 180px; /* Adjust image size */
+    }
+}
+
+/* For medium screens (up to 1200px) */
+@media (max-width: 1200px) {
+    .brands {
+        padding: 25px; /* Adjust padding */
+    }
+    .brand-logos {
+        justify-content: center;
+        flex-wrap: wrap; /* Wrap brand logos */
+    }
+    .brand-logos img {
+        max-width: 160px; /* Adjust image size */
+        margin: 10px; /* Add margin around images */
+    }
+}
+
+/* For small screens (up to 922px) */
+@media (max-width: 922px) {
+    .brands {
+        padding: 20px; /* Adjust padding */
+    }
+    .brand-logos img {
+        max-width: 140px; /* Adjust image size */
+        margin: 8px; /* Adjust margin around images */
+    }
+}
+
+/* For extra small screens (up to 601px) */
+@media (max-width: 601px) {
+    .brands {
+        padding: 15px; /* Adjust padding */
+    }
+    .brand-logos img {
+        max-width: 120px; /* Smaller images for smaller screens */
+        margin: 6px; /* Adjust margin around images */
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* For very small screens (up to 600px) */
+@media (max-width: 600px) {
+    .brands {
+        padding: 10px; /* Adjust padding */
+    }
+    .brand-logos img {
+        max-width: 100px; /* Even smaller images for very small screens */
+        margin: 5px; /* Adjust margin around images */
+    }
+}
+
+/* For smallest screens (up to 320px) */
+@media (max-width: 320px) {
+    .brands {
+        padding: 8px; /* Minimal padding for the smallest screens */
+    }
+    .brand-logos img {
+        max-width: 80px; /* Smallest image size for brand logos */
+        margin: 4px; /* Adjust margin around images */
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -337,18 +518,7 @@ button {
     font-size: 12px;
 }
 
-/* Additional styles for other elements, such as brands and services */
-.brands {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #E0FFFF;
-}
 
-.brand-logos img {
-    max-width: 150px;
-}
 
 .services {
     display: flex;
