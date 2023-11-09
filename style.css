@@ -1021,3 +1021,72 @@ button {
     }
   }
   
+
+
+
+/* Apply a global font and color to all elements for consistency */
+body {
+    font-family: Arial, sans-serif;
+    color: #333; /* Adjust color as needed */
+}
+
+/* Style the form */
+#contact-form {
+    width: 100%; /* Adjust width as per your layout */
+    max-width: 600px; /* Maximum width of form */
+    margin: 20px auto; /* Center the form with automatic margins */
+    padding: 20px;
+    background: #fff; /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+}
+
+#contact-form h2 {
+    text-align: center;
+}
+
+/* Style each form field */
+#contact-form .field {
+    margin-bottom: 20px; /* Space out the fields */
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Make the label text bold */
+}
+
+/* Style input fields */
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+    font-size: 16px; /* Increase font size for better readability */
+}
+
+/* Style the submit button */
+#contact-form input[type="submit"] {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #333; /* Dark background for the button */
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    color: white; /* White text */
+    font-size: 18px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#contact-form input[type="submit"]:hover {
+    background-color: #555; /* Darken button on hover */
+}
+
+/* Add a red asterisk for required fields */
+#contact-form label:after {
+    content: " *"; /* Add asterisk */
+    color: red; /* Make the asterisk red */
+}
