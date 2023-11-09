@@ -1,0 +1,14 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Match any document in the 'contactSubmissions' collection
+    match /contactSubmissions/{document=**} {
+      // Allow anyone to submit the form
+      allow create: if true;
+      // No one can read documents by default, unless authenticated
+      allow read: if request.auth != null;
+      // No one can update or delete documents by default
+      allow update, delete: if false;
+    }
+  }
+}
